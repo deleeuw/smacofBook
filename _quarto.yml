@@ -1,0 +1,28 @@
+project:
+  type: book
+
+book:
+  title: "smacof at 50"
+  subtitle: "A Manual"  
+  author: "Jan de Leeuw"
+  date: "12/13/2024"
+  chapters:
+    - index.qmd     
+    - intro.qmd
+    - notation.qmd
+    - references.qmd
+
+bibliography: 
+  - total.bib
+  - mypubs.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+

@@ -1,0 +1,93 @@
+# Notations {.unnumbered}
+
+## Conventions {.unnumbered}
+
+I number and label *all* displayed equations. Equations are displayed,
+instead of inlined, if and only if one of the following is true.
+
+-   They are important.
+-   They are referred to elsewhere in the text.
+-   Not displaying them messes up the line spacing.
+
+All code chunks in the text are named. Theorems, lemmas, chapters,
+sections, subsections, and so on are also named and numbered. I use
+the serial comma.
+
+The dilemma of whether to use "we" or "I" throughout the book is solved
+in the usual way. If I feel that a result is the work of a group (me, my
+co-workers, and the giants on whose shoulders we stand) then I use "we".
+If it's an individual decision, or something personal, then I use "I".
+The default is "we", as it always should be in scientific writing.
+
+Most of the individual chapters also have some of the necessary mathematical background material, both notation and results, sometimes with specific elaborations that seem useful for the book. Sometimes this background material is quite extensive. Examples are splines, majorization, unweighting, monotone
+regression, and the basic Zangwill and Ostrowski fixed point theorems we need for convergence analysis of our algorithms.
+
+## Notations and Reserved Symbols {.unnumbered}
+
+### Spaces {.unnumbered}
+
+* $\mathbb{R}^n$ is the space of all real vectors, i.e. all $n$-element tuples of real numbers. Typical elements of $\mathbb{R}^n$
+are $x,y,z$. The element of $x$ in position 
+$i$ is $x_i$. Defining a vector by its elements is done with $x=\{x_i\}$. 
+
+* $\mathbb{R}^n$ is equipped with the inner product $\langle x,y\rangle=x'y=\sum_{i=1}^nx_iy_i$ and the norm $\smash{\|x\|=\sqrt{x'x}}$.
+
+* The canonical basis for $\mathbb{R}^n$ is the $n-$tuple $(e_1,cdots,e_n)$, where $e_i$ has element $i$ equal to $+1$
+and all other elements equal to zero. Thus $\|e_i\|=1$ and
+$\langle e_i,e_j\rangle=\delta^{ij}$, with $\delta^{ij}$ the 
+Kronecker delta (equal to one if $i=j$ and zero otherwise).
+Note that $x_i=\langle e_i,x\rangle$.
+
+* $\mathbb{R}$ is the real line and $\mathbb{R}_+$ is the half line of
+non-negative numbers. The postive reals are $\mathbb{R}_{++}$.
+
+* $\mathbb{R}^{n\times m}$ is the space of all $n\times m$ real matrices. Typical elements of $\mathbb{R}^{n\times m}$ are $A,B,C$. The element of $A$ in row $i$ and column $j$ is $a_{ij}$. Defining a matrix by its elements is done with $A=\{a_{ij}\}$. 
+
+* $\mathbb{R}^{n\times m}$ is equipped with the inner product $\langle A,B\rangle=\text{tr} A'B=\sum_{i=1}^n\sum_{j=1}^ma_{ij}b_{ij}$ and the norm $\|A\|=\sqrt{\text{tr}\ A'A}$.
+
+* The canonical basis for $\mathbb{R}^{n\times m}$ is the $nm-$tuple $(E_{11},cdots,E_{nm})$, where $E_{ij}$ has element $(i,j)$ equal to $+1$
+and all other elements equal to zero. Thus $\|E_{ij}\|=1$ and
+$\langle E_{ij},E_{kl}\rangle=\delta^{ik}\delta^{jl}$.
+
+$\text{vec}$ and $\text{vec}^{-1}$
+
+### Matrices  {.unnumbered}
+
+* $a_{i\bullet}$ is row $i$ of matrix $A$, $a_{\bullet j}$ is column $j$.
+
+* $a_{i\star}$ is the sum of row $i$ of matrix $A$, $a_{\star j}$ is the sum of column $j$.
+
+* $A'$ is the transpose of $A$, and $\text{diag}(A)$ is the diagonal
+matrix with the diagonal elements of $A$. The inverse of a square
+matrix $A$ is $A^{-1}$, the Moore-Penrose generalized inverse of any matrix $A$ 
+is $A^+$. The transpose of the inverse, and the inverse of the transpose,
+are $A^{-T}$.
+
+* If $A$ and $B$ are two $n\times m$ matrices then their Hadamard (or elementwise) product
+$C=A\times B$ has elements $c_{ij}=a_{ij}b_{ij}$. The Hadamard quotient is $C=A/B$, with elements $c_{ij}=a_{ij}/b_{ij}$. The Hadamard power is $A^{(k)}=A^{(p-1)}\times A$.
+
+* DC matrices. Centering matrix.
+$J_n=I_n-n^{-1}E_n$. We do not use the
+subscripts if the order is obvious from the context.
+
+* Matrices of matrices. Partitioned matrices. $A_{ij}$ and thus $\{A_{ij}\}_{kl}$.
+
+* Direct sum and Product
+
+### Functions  {.unnumbered}
+
+* $f,g,h,\cdots$ are used for functions or mappings. $f:X\rightarrow Y$ says that $f$ maps $X$ into $Y$.
+
+* $\sigma$ is used for all real-valued least squares loss functions.
+
+### MDS  {.unnumbered}
+
+* $\Delta=\{\delta_{ij\cdots}\}$ is a matrix or array of dissimilarities.
+
+* $\langle \mathbb{X},d\rangle$ is a metric space, with $d:\mathcal{X}\otimes\mathcal{X}\rightarrow\mathbb{R}_+$ the distance function. If $X$ is  is an ordered n-tuple $(x_1,\cdots,x_n)$ of elements of $\mathcal{X}$ then $D(X)$ is $\{d(x_i,x_j)\}$, the elements of which we also write as $d_{ij}(X)$.
+
+* Summation over the elements of vector $x\in\mathbb{R}^n$ is $\sum_{i=1}^n x_i$. Summation over the elements of matrix $A\in\mathbb{R}^{n\times m}$ is $\sum_{i=1}^n\sum_{j=1}^m a_{ij}$.
+Summation over the elements above the diagonal of $A$ is
+$\mathop{\sum\sum}_{1\leq i<j\leq n}a_{ij}$.
+
+* Conditional summation is, for example, $\sum_{i=1}^n \{x_i\mid x_i>0\}$.
