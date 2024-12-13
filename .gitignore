@@ -8,4 +8,5 @@
 *.md
 !README.md
 *._files
+._libs
 /.quarto/

@@ -32,12 +32,11 @@ format:
     theme:
       - cosmo
       - brand
-    keep-md: true
   pdf:
     pdf-engine: lualatex
-    keep-tex: true
     include-in-header: 
       - preamble.tex
+    mainfont: Times New Roman
     documentclass: scrbook
     
 colorlinks: true
@@ -48,5 +47,5 @@ editor: source
 papersize: letter
 graphics: true
 link-citations: true
-mainfont: Times New Roman
+
 
