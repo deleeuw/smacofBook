@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.3">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; smacof Basics – smacof at 50</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./metric.html" rel="next">
+<link href="./intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-81b5c3e63835cfde897ecd3d35a35a41.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d6729ca8866fc23da5680a05b410664f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./basics.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">smacof Basics</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">smacof at 50</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./basics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">smacof Basics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./metric.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metric smacof</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notations</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#loss-function" id="toc-loss-function" class="nav-link active" data-scroll-target="#loss-function"><span class="header-section-number">2.1</span> Loss Function</a></li>
+  <li><a href="#metric-mds" id="toc-metric-mds" class="nav-link" data-scroll-target="#metric-mds"><span class="header-section-number">2.2</span> Metric MDS</a></li>
+  <li><a href="#non-linear-mds" id="toc-non-linear-mds" class="nav-link" data-scroll-target="#non-linear-mds"><span class="header-section-number">2.3</span> Non-linear MDS</a></li>
+  <li><a href="#non-metric-mds" id="toc-non-metric-mds" class="nav-link" data-scroll-target="#non-metric-mds"><span class="header-section-number">2.4</span> Non-metric MDS</a></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization"><span class="header-section-number">2.5</span> Normalization</a></li>
+  <li><a href="#some-thoughts-on-als" id="toc-some-thoughts-on-als" class="nav-link" data-scroll-target="#some-thoughts-on-als"><span class="header-section-number">2.6</span> Some thoughts on ALS</a>
+  <ul class="collapse">
+  <li><a href="#the-single-phase-approach" id="toc-the-single-phase-approach" class="nav-link" data-scroll-target="#the-single-phase-approach"><span class="header-section-number">2.6.1</span> The Single-Phase approach</a></li>
+  <li><a href="#the-two-phase-approach" id="toc-the-two-phase-approach" class="nav-link" data-scroll-target="#the-two-phase-approach"><span class="header-section-number">2.6.2</span> The Two-Phase Approach</a></li>
+  </ul></li>
+  <li><a href="#smacof-notation-and-terminology" id="toc-smacof-notation-and-terminology" class="nav-link" data-scroll-target="#smacof-notation-and-terminology"><span class="header-section-number">2.7</span> Smacof Notation and Terminology</a></li>
+  <li><a href="#intermezzo-explicit-normalization" id="toc-intermezzo-explicit-normalization" class="nav-link" data-scroll-target="#intermezzo-explicit-normalization"><span class="header-section-number">3</span> Intermezzo: Explicit Normalization</a></li>
+  <li><a href="#smacof-algorithm" id="toc-smacof-algorithm" class="nav-link" data-scroll-target="#smacof-algorithm"><span class="header-section-number">4</span> Smacof Algorithm</a>
+  <ul class="collapse">
+  <li><a href="#majorizing-stress" id="toc-majorizing-stress" class="nav-link" data-scroll-target="#majorizing-stress"><span class="header-section-number">4.0.1</span> Majorizing Stress</a></li>
+  <li><a href="#accelerating" id="toc-accelerating" class="nav-link" data-scroll-target="#accelerating"><span class="header-section-number">4.0.2</span> Accelerating</a></li>
+  <li><a href="#stress-formula-two" id="toc-stress-formula-two" class="nav-link" data-scroll-target="#stress-formula-two"><span class="header-section-number">4.1</span> Stress formula two</a></li>
+  </ul></li>
+  <li><a href="#smacof-datastructure" id="toc-smacof-datastructure" class="nav-link" data-scroll-target="#smacof-datastructure"><span class="header-section-number">5</span> smacof Datastructure</a>
+  <ul class="collapse">
+  <li><a href="#metric" id="toc-metric" class="nav-link" data-scroll-target="#metric"><span class="header-section-number">5.0.1</span> Metric</a></li>
+  <li><a href="#interval" id="toc-interval" class="nav-link" data-scroll-target="#interval"><span class="header-section-number">5.1</span> Interval</a></li>
+  <li><a href="#ordinal" id="toc-ordinal" class="nav-link" data-scroll-target="#ordinal"><span class="header-section-number">5.2</span> Ordinal</a></li>
+  <li><a href="#paired-comparisons" id="toc-paired-comparisons" class="nav-link" data-scroll-target="#paired-comparisons"><span class="header-section-number">5.3</span> Paired Comparisons</a></li>
+  <li><a href="#complete-triads" id="toc-complete-triads" class="nav-link" data-scroll-target="#complete-triads"><span class="header-section-number">5.4</span> Complete triads</a></li>
+  </ul></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">6</span> Code</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">smacof Basics</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="loss-function" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="loss-function"><span class="header-section-number">2.1</span> Loss Function</h2>
+<p>In the pioneering papers <span class="citation" data-cites="kruskal_64a">Kruskal (<a href="#ref-kruskal_64a" role="doc-biblioref">1964a</a>)</span> and <span class="citation" data-cites="kruskal_64b">Kruskal (<a href="#ref-kruskal_64b" role="doc-biblioref">1964b</a>)</span> the MDS problem was formulated for the first time as minimization of an explicit <em>loss function</em> or <em>badness-of-fit function</em>, which measures the quality of the approximation of the dissimilarities by the distances. To be historically accurate, we should mention that the non-metric MDS technique proposed by <span class="citation" data-cites="shepard_62a">Shepard (<a href="#ref-shepard_62a" role="doc-biblioref">1962a</a>)</span> and <span class="citation" data-cites="shepard_62b">Shepard (<a href="#ref-shepard_62b" role="doc-biblioref">1962b</a>)</span> can be reformulated as minimization of an explicit loss function (see, for example, <span class="citation" data-cites="deleeuw_E_17e">De Leeuw (<a href="#ref-deleeuw_E_17e" role="doc-biblioref">2017</a>)</span>). And the classical Young-Householder-Torgerson MDS technique (<span class="citation" data-cites="torgerson_52">Torgerson (<a href="#ref-torgerson_52" role="doc-biblioref">1952</a>)</span>) for metric MDS can be reformulated as minimizing an explicit least squares loss function (<span class="citation" data-cites="deleeuw_heiser_C_82">De Leeuw and Heiser (<a href="#ref-deleeuw_heiser_C_82" role="doc-biblioref">1982</a>)</span>) as well. But neither of these two predecessors was formulated originally as an explicit minimization problem for a specific loss function</p>
+</section>
+<section id="metric-mds" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="metric-mds"><span class="header-section-number">2.2</span> Metric MDS</h2>
+<p>The loss function in least squares metric Euclidean MDS is called <em>raw stress</em> and is defined as <span class="math display">\[\begin{equation}
+\sigma_R(X):=\frac12\mathop{\sum\sum}_{1\leq j&lt;i\leq n}w_{ij}(\delta_{ij}-d_{ij}(X))^2.
+(\#eq:stressdef)
+\end{equation}\]</span> The subscript R in <span class="math inline">\(\sigma_R\)</span> stands for “raw”, because we will discuss other least squares loss functions for which we will also use the symbol <span class="math inline">\(\sigma\)</span>, but with other subscripts.</p>
+<p>In definition @ref(eq:stressdef) the <span class="math inline">\(w_{ij}\)</span> are known non-negative <em>weights</em>, the <span class="math inline">\(\delta_{ij}\)</span> are the known non-negative <em>dissimilarities</em> between objects <span class="math inline">\(o_i\)</span> and <span class="math inline">\(o_j\)</span>, and the <span class="math inline">\(d_{ij}(X)\)</span> are the <em>distances</em> between the corresponding points <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>. The summation is over all pairs <span class="math inline">\((i,j)\)</span> with <span class="math inline">\(w_{ij}&gt;0\)</span>. From now on we use “metric MDS” to mean the minimization of <span class="math inline">\(\sigma_R\)</span>.</p>
+<p>The <span class="math inline">\(n\times p\)</span> matrix <span class="math inline">\(X\)</span>, which has the coordinates <span class="math inline">\(x_i\)</span> of the <span class="math inline">\(n\)</span> points as its rows, is called the <em>configuration</em>, where <span class="math inline">\(p\)</span> is the <em>dimension</em> of the Euclidean space in which we make the map. The metric MDS problem (of dimension <span class="math inline">\(p\)</span>, for given <span class="math inline">\(W\)</span> and <span class="math inline">\(\Delta\)</span>) is the minimization of @ref(eq:stressdef) over the <span class="math inline">\(n\times p\)</span> configurations <span class="math inline">\(X\)</span>.</p>
+<p>The weights <span class="math inline">\(w_{ij}\)</span> can be used to quantify information about the precision or importance of the corresponding dissimilarities. Some of the weights may be zero, which can be used to code <em>missing data</em>. If all weights are positive we have <em>complete data</em>. If we have complete data, and all weights are equal to one, we have <em>unweighted</em> metric MDS. The pioneering papers by Shepard, Kruskal, and Guttman only consider the unweighted case. Weights were only introduced in MDS in <span class="citation" data-cites="deleeuw_C_77">De Leeuw (<a href="#ref-deleeuw_C_77" role="doc-biblioref">1977</a>)</span>.</p>
+<p>We assume throughout that the weights are <em>irreducible</em> (<span class="citation" data-cites="deleeuw_C_77">De Leeuw (<a href="#ref-deleeuw_C_77" role="doc-biblioref">1977</a>)</span>). This means there is no partitioning of the index set <span class="math inline">\(I_n:=\{1,2,\cdots,n\}\)</span> into subsets for which all between-subset weights are zero. A reducible metric MDS problems decomposes into a number of smaller independent metric MDS problems, so the irreducibility assumption causes no real loss of generality.</p>
+<p>The fact that the summation in @ref(eq:stressdef) is over all <span class="math inline">\(j&lt;i\)</span> indicates that the diagonal elements of <span class="math inline">\(\Delta\)</span> are not used (they are assumed to be zero) and the elements above the diagonal are not used either (they are assumed to be equal to the corresponding elements below the diagonal). The somewhat mysterious factor <span class="math inline">\(\frac12\)</span> in definition @ref(eq:stressdef) is there because it simplifies some of the formulas in later sections of this paper.</p>
+</section>
+<section id="non-linear-mds" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="non-linear-mds"><span class="header-section-number">2.3</span> Non-linear MDS</h2>
+<p>Kruskal was not really interested in metric MDS and the “raw” loss function @ref(eq:stressdef). His papers are really about non-metric MDS, by which we mean least squares non-metric Euclidean MDS. Non-metric MDS differs from metric MDS because we have incomplete information about the dissimilarities. As we have seen, that if some dissimilarities are missing metric MDS can handle this by using zero weights. In some situations, however, we only know the rank order of the non-missing dissimilarities. We do not know, or we refuse to use, their actual numeric values. Or, to put it differently, even if we have numerical dissimilarities we are looking for a <em>transformation</em> of the non-missing dissimilarities, where the transformation is chosen from a set of admissible transformations (for instance from all linear or monotone transformations). If the dissimilarities are non-numerical, for example rank orders or partitionings, we choose from the set of admissible <em>quantifications</em>.</p>
+<p>In non-metric MDS raw stress becomes <span class="math display">\[\begin{equation}
+\sigma_R(X,\Delta):=\frac12\sum w_{ij}(\delta_{ij}-d_{ij}(X))^2,
+(\#eq:rawstressdef)
+\end{equation}\]</span> where <span class="math inline">\(\Delta\)</span> varies over the quantified or transformed dissimilarities. In MDS parlance they are also called <em>pseudo-distances</em> or <em>disparities</em>. Loss function @ref(eq:rawstressdef) must be minimized over both configurations and disparities, with the condition that the disparities <span class="math inline">\(\Delta\)</span> are an admissible transformation or quantification of the data. In Kruskal’s non-metric MDS this means requiring monotonicity. In this paper we will consider various other choices for the set of admissible transformations. We will use the symbol <span class="math inline">\(\mathfrak{D}\)</span> for the set of admissible transformations</p>
+<p>The most familiar examples of <span class="math inline">\(\mathfrak{D}\)</span> (linear, polynomial, splines, monotone) define convex cones with apex at the origin. This means that if <span class="math inline">\(\Delta\in\mathfrak{D}\)</span> then so is <span class="math inline">\(\lambda\Delta\)</span> for all <span class="math inline">\(\lambda\geq 0\)</span>. But consequently minimizing @ref(eq:rawstressdef) over all <span class="math inline">\(\Delta\in\mathfrak{D}\)</span> and over all configurations has the trivial solution <span class="math inline">\(\Delta=0\)</span> and <span class="math inline">\(X=0\)</span>, corresponding with the global minimum <span class="math inline">\(\sigma(X,\Delta)=0\)</span>. We need additional constraints to rule out this trivial solution, and in non-metric MDS this is done by choosing a <em>normalization</em> that keeps the solution away from zero.</p>
+<p>Kruskal’s original solution is to define <em>normalized stress</em> as <span class="math display">\[\begin{equation}
+\sigma(X,\Delta):=\frac{\sum w_{ij}(\delta_{ij}-d_{ij}(X))^2}{\sum w_{ij}d_{ij}^2(X)}.
+(\#eq:nstressdef)
+\end{equation}\]</span> To be precise, in Kruskal’s formulation there are no weights, and he actually takes the square root of @ref(eq:nstressdef) to define <em>Kruskal’s stress</em>. The non-metric Euclidean MDS problem now is to minimize loss function @ref(eq:nstressdef) over all <span class="math inline">\(n\times p\)</span> configurations <span class="math inline">\(X\)</span> and all admissible disparities <span class="math inline">\(\Delta\)</span>.</p>
+</section>
+<section id="non-metric-mds" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="non-metric-mds"><span class="header-section-number">2.4</span> Non-metric MDS</h2>
+</section>
+<section id="normalization" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="normalization"><span class="header-section-number">2.5</span> Normalization</h2>
+<p>Equation @ref(eq:nstressdef) is only one way to normalize raw stress. Some obvious alternatives are discussed in detail in <span class="citation" data-cites="kruskal_carroll_69">Kruskal and Carroll (<a href="#ref-kruskal_carroll_69" role="doc-biblioref">1969</a>)</span> and <span class="citation" data-cites="deleeuw_U_75a">De Leeuw (<a href="#ref-deleeuw_U_75a" role="doc-biblioref">1975</a>)</span>. In the terminology of <span class="citation" data-cites="deleeuw_U_75a">De Leeuw (<a href="#ref-deleeuw_U_75a" role="doc-biblioref">1975</a>)</span> there are <em>explicit</em> and <em>implicit</em> normalizations.</p>
+<p>In implicit normalization we minimize either <span class="math display">\[\begin{equation}
+\sigma(X,\hat D):=\frac{\sum  w_{ij}(\hat d_{ij} -d_{ij}(X))^2}{\sum   w_{ij}^{\ }\hat d_{ij}^2}
+(\#eq:implicit1)
+\end{equation}\]</span> or <span class="math display">\[\begin{equation}
+\sigma(X,\hat D):=\frac{\sum   w_{ij}(\hat d_{ij}-d_{ij}(X))^2}{\sum   w_{ij}^{\ }d_{ij}^2(X) }
+(\#eq:implicit2)
+\end{equation}\]</span> over <span class="math inline">\(X\)</span> and <span class="math inline">\(\Delta\in\mathfrak{D}\)</span>.</p>
+<p>As we have seen, <span class="citation" data-cites="kruskal_64a">Kruskal (<a href="#ref-kruskal_64a" role="doc-biblioref">1964a</a>)</span> chooses definition @ref(eq:implicit2) and calls the explicitly normalized loss function <em>normalized stress</em>. Note that we overload the symbol <span class="math inline">\(\sigma\)</span> to denote any one of the least squares loss functions. It will always be clear from the text which <span class="math inline">\(\sigma\)</span> we are talking about.</p>
+<p>In explicit normalization we minimize the raw stress <span class="math inline">\(\sigma_R(X,\hat D)\)</span> from @ref(eq:rawstressdef), but we add the explicit constraint <span class="math display">\[\begin{equation}
+\sum   w_{ij}^{\ }d_{ij}^2(X)=1,
+(\#eq:explicit1)
+\end{equation}\]</span> or the constraint <span class="math display">\[\begin{equation}
+\sum   w_{ij}^{\ }\hat d_{ij}^2=1.
+(\#eq:explicit2)
+\end{equation}\]</span> <span class="citation" data-cites="kruskal_carroll_69">Kruskal and Carroll (<a href="#ref-kruskal_carroll_69" role="doc-biblioref">1969</a>)</span> and <span class="citation" data-cites="deleeuw_E_19d">De Leeuw (<a href="#ref-deleeuw_E_19d" role="doc-biblioref">2019</a>)</span> show that these four normalizations all lead to essentially the same solution for <span class="math inline">\(X\)</span> and <span class="math inline">\(\hat D\)</span>, up to scale factors dictated by the choice of the particular normalization. It is also possible to normalize both <span class="math inline">\(X\)</span> and <span class="math inline">\(\hat D\)</span>, either explicitly or implicitly, and again this will give the same solutions, suitably normalized. These invariance results assume the admissible transformations form a closed cone with apex at the origin, i.e.&nbsp;if <span class="math inline">\(\hat D\)</span> is admissible and <span class="math inline">\(\lambda\geq 0\)</span> then <span class="math inline">\(\lambda\hat D\)</span> is admissible as well. The matrices of Euclidean distances <span class="math inline">\(D(X)\)</span> form a similar closed cone as well. The non-metric MDS problem is to find an element of the <span class="math inline">\(\hat D\)</span> cone <span class="math inline">\(\mathcal{D}\)</span> and an element of the <span class="math inline">\(D(X)\)</span> cone where the angle between the two is a small as possible.</p>
+<p>In the R version of smacof (<span class="citation" data-cites="deleeuw_mair_A_09c">De Leeuw and Mair (<a href="#ref-deleeuw_mair_A_09c" role="doc-biblioref">2009</a>)</span>, <span class="citation" data-cites="mair_groenen_deleeuw_A_22">Mair, Groenen, and De Leeuw (<a href="#ref-mair_groenen_deleeuw_A_22" role="doc-biblioref">2022</a>)</span>) we use explicit normalization @ref(eq:explicit2). This is supported by the result, also due to <span class="citation" data-cites="deleeuw_U_75a">De Leeuw (<a href="#ref-deleeuw_U_75a" role="doc-biblioref">1975</a>)</span>, that projection on the intersection of the cone of disparities and the sphere defined by @ref(eq:explicit2) is equivalent to first projecting on the cone and then normalizing the projection (see also <span class="citation" data-cites="bauschke_bui_wang_18">Bauschke, Bui, and Wang (<a href="#ref-bauschke_bui_wang_18" role="doc-biblioref">2018</a>)</span>).</p>
+<p>In the version of non-metric MDS discussed in this manual we need more flexibility. For algorithmic reasons that may become clear later on, we will go with the original @ref(eq:nstressdef), i.e.&nbsp;with the implicitly normalized Kruskal’s stress. For the final results the choice between normalizations should not make a difference, but the iterative computations will be different for the different choices.</p>
+</section>
+<section id="some-thoughts-on-als" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="some-thoughts-on-als"><span class="header-section-number">2.6</span> Some thoughts on ALS</h2>
+<p>The formulation in equations @ref(eq:gmdsdef1) and @ref(eq:gmdsdef2) neatly separates the metric MDS part @ref(eq:gmdsdef1) and the transformation/quantification part @ref(eq:gmdsdef2). This second part is also often called the <em>optimal scaling</em> part.</p>
+<p>Equations @ref(eq:gmdsdef1) and @ref(eq:gmdsdef2) corresponds with the way most iterative non-linear and non-metric MDS techniques are implemented. The algorithms use <em>Alternating Least Squares</em> (ALS). There have been quite a few ALS algorithms avant-la-lettre, but as far as I know both the name and ALS as a general approach to algorithm construction were first introduced in <span class="citation" data-cites="deleeuw_R_68d">De Leeuw (<a href="#ref-deleeuw_R_68d" role="doc-biblioref">1968</a>)</span>, and then widely disseminated in a series of papers by De Leeuw, Young, and Takane in the 1970’s (work summarized in <span class="citation" data-cites="young_deleeuw_takane_C_80">Young, De Leeuw, and Takane (<a href="#ref-young_deleeuw_takane_C_80" role="doc-biblioref">1980</a>)</span> and <span class="citation" data-cites="young_81">Young (<a href="#ref-young_81" role="doc-biblioref">1981</a>)</span>).</p>
+<p>In the ALS implementation of MDS two sub-algorithms are used in each iteration: one to improve the fit of the distances to the current disparities <span class="math inline">\(\Delta\)</span> and one to improve the fit of the disparities to the current distances. The two sub-algorithms define one major iteration of the MDS technique. In formulas (using superscript <span class="math inline">\((k)\)</span> for major iteration number) we start with <span class="math inline">\((X^{(0)},\Delta^{(0)})\)</span> and then alternate the mimization problems where <span class="math inline">\(\ni\)</span> is short for “such that”. In MDS it is more realistic not to minimize loss in the sub-steps but merely to decrease it. Minimization in one or both of the two subproblems may itself require an infinite iterative method, which we have to truncate anyway. Thus </p>
+<section id="the-single-phase-approach" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="the-single-phase-approach"><span class="header-section-number">2.6.1</span> The Single-Phase approach</h3>
+<p>In <span class="citation" data-cites="kruskal_64a">Kruskal (<a href="#ref-kruskal_64a" role="doc-biblioref">1964a</a>)</span> defines <span class="math display">\[\begin{equation}
+\sigma(X):=\min_{\hat D\in\mathfrak{D}}\ \sigma(\hat D,X)=\sigma(X,\hat D(X)),
+(\#eq:project)
+\end{equation}\]</span> where <span class="math inline">\(\sigma(\hat D,X)\)</span> is defined by @ref(eq:implicit2). The minimum in @ref(eq:project) is over admissible transformations. In definition @ref(eq:project) <span class="math display">\[\begin{equation}
+\hat D(X):=\mathop{\text{argmin}}_{\hat D\in\mathfrak{D}}\sigma(X, \hat D).
+(\#eq:optscal)
+\end{equation}\]</span> Normalized stress defined by @ref(eq:project) is now a function of <span class="math inline">\(X\)</span> only. Under some conditions, which are true in Kruskal’s definition of non-metric MDS, there is a simple relation between the partials of @ref(eq:implicit2) and those of @ref(eq:project). <span class="math display">\[\begin{equation}
+\mathcal{D}\sigma(X)=\mathcal{D}_1\sigma(X,\hat D(X)),
+(\#eq:partials)
+\end{equation}\]</span> where <span class="math inline">\(\mathcal{D}\sigma(X)\)</span> are the derivatives of <span class="math inline">\(\sigma\)</span> from @ref(eq:project) and <span class="math inline">\(\mathcal{D}_1\sigma(X,\hat D(X))\)</span> are the partial derivatives of <span class="math inline">\(\sigma\)</span> from @ref(eq:implicit2) with respect to <span class="math inline">\(X\)</span>. Thus the partials of <span class="math inline">\(\sigma\)</span> from @ref(eq:project) can be computed by evaluating the partials of <span class="math inline">\(\sigma\)</span> from @ref(eq:implicit2) with respect to <span class="math inline">\(X\)</span> at <span class="math inline">\((X,\hat D(X))\)</span>. This has created much confusion in the past. The non-metric MDS problem in Kruskal’s original formulation is now to minimize <span class="math inline">\(\sigma\)</span> from @ref(eq:project), which is a function of <span class="math inline">\(X\)</span> alone.</p>
+<p><span class="citation" data-cites="guttman_68">Guttman (<a href="#ref-guttman_68" role="doc-biblioref">1968</a>)</span> calls this the <em>single-phase approach</em>. A variation of Kruskal’s single-phase approach defines <span class="math display">\[\begin{equation}
+\sigma(X)=\sum w_{ij}(d_{ij}^\#(X)-d_{ij}(X))^2,
+(\#eq:rankimage)
+\end{equation}\]</span> where the <span class="math inline">\(d_{ij}^\#(X)\)</span> are <em>Guttman’s rank images</em>, i.e.&nbsp;the permutation of the <span class="math inline">\(d_{ij}(X)\)</span> that makes them monotone with the <span class="math inline">\(\delta_{ij}\)</span> (<span class="citation" data-cites="guttman_68">Guttman (<a href="#ref-guttman_68" role="doc-biblioref">1968</a>)</span>). Or, alternatively, define <span class="math display">\[\begin{equation}
+\sigma(X):=\sum   w_{ij}(d_{ij}^\%(X)-d_{ij}(X))^2,
+(\#eq:shepard)
+\end{equation}\]</span> where the <span class="math inline">\(\hat d_{ij}^\%(X)\)</span> are <em>Shepard’s rank images</em>, i.e.&nbsp;the permutation of the <span class="math inline">\(\delta_{ij}\)</span> that makes them monotone with the <span class="math inline">\(d_{ij}(X)\)</span> (<span class="citation" data-cites="shepard_62a">Shepard (<a href="#ref-shepard_62a" role="doc-biblioref">1962a</a>)</span>, <span class="citation" data-cites="shepard_62b">Shepard (<a href="#ref-shepard_62b" role="doc-biblioref">1962b</a>)</span>, <span class="citation" data-cites="deleeuw_E_17e">De Leeuw (<a href="#ref-deleeuw_E_17e" role="doc-biblioref">2017</a>)</span>).</p>
+<p>Minimizing the Shepard or Guttman single-phase loss functions is computationally more complicated than Kruskal’s <em>monotone regression</em> approach, mostly because the rank-image transformations are not differentiable, and there is no analog of @ref(eq:partials) and of the equivalence of the different implicit and explicit normalizations.</p>
+</section>
+<section id="the-two-phase-approach" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="the-two-phase-approach"><span class="header-section-number">2.6.2</span> The Two-Phase Approach</h3>
+<p>The <em>two-phase approach</em> or <em>alternating least squares (ALS)</em> approach alternates minimization of <span class="math inline">\(\sigma(\hat D,X)\)</span> over <span class="math inline">\(X\)</span> for our current best estimate of <span class="math inline">\(\hat D\)</span> with minimization of <span class="math inline">\(\sigma(\hat D,X)\)</span> over <span class="math inline">\(\Delta\in\mathfrak{D}\)</span> for our current best value of <span class="math inline">\(X\)</span>. Thus an update from iteration <span class="math inline">\(k\)</span> to iteration <span class="math inline">\(k+1\)</span> looks like This ALS approach to MDS was in the air since the early (unsuccessful) attempts around 1968 of Young and De Leeuw to combine Torgerson’s classic metric MDS method with Kruskal’s monotone regression transformation. All previous implementations of non-metric smacof use the two-phase approach, and we will do the same in this paper.</p>
+<p>As formulated, however, there are some problems with the ALS algorithm. Step @ref(eq:step1) is easy to carry out, using monotone regression. Step @ref(eq:step2) means solving a metric scaling problem, which is an iterative proces that requires an infinite number of iterations. Thus, in the usual implementations, step @ref(eq:step1) is combined with one of more iterations of a convergent iterative procedure for metric MDS, such as smacof. If we take only one of these <em>inner iterations</em> the algorithm becomes indistinguishable from Kruskal’s single-phase method. This has also created much confusion in the past.</p>
+<p>In the usual implementations of the ALS approach we solve the first subproblem @ref(eq:step1) exactly, while we take only a single step towards the solution for given <span class="math inline">\(\hat D\)</span> in the second phase @ref(eq:step2). If we have an infinite iterative procedure to compute the optimal <span class="math inline">\(\hat D\in\mathfrak{D}\)</span> for given <span class="math inline">\(X\)</span>, then a more balanced approach would be to take several inner iterations in the first phase and several inner iterations in the second phase. How many of each, nobody knows. In our current implementation of smacof we take several inner iteration steps in the first phase and a single inner iteration step in the second phase.</p>
+</section>
+</section>
+<section id="smacof-notation-and-terminology" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="smacof-notation-and-terminology"><span class="header-section-number">2.7</span> Smacof Notation and Terminology</h2>
+<p>We discuss some the MDS notation used in smacof, which was first introduced in <span class="citation" data-cites="deleeuw_C_77">De Leeuw (<a href="#ref-deleeuw_C_77" role="doc-biblioref">1977</a>)</span> and <span class="citation" data-cites="deleeuw_heiser_C_77">De Leeuw and Heiser (<a href="#ref-deleeuw_heiser_C_77" role="doc-biblioref">1977</a>)</span>. More detailed <span class="citation" data-cites="deleeuw_heiser_C_80">De Leeuw and Heiser (<a href="#ref-deleeuw_heiser_C_80" role="doc-biblioref">1980</a>)</span>, <span class="citation" data-cites="deleeuw_A_88b">De Leeuw (<a href="#ref-deleeuw_A_88b" role="doc-biblioref">1988</a>)</span>, <span class="citation" data-cites="borg_groenen_05">Borg and Groenen (<a href="#ref-borg_groenen_05" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="groenen_vandevelden_16">Groenen and Van de Velden (<a href="#ref-groenen_vandevelden_16" role="doc-biblioref">2016</a>)</span></p>
+<p>This notation is useful for the second phase of the ALS algorithm, in which solve the metric MDS problem of we minimizing unnormalized <span class="math inline">\(\sigma(X,\hat D)\)</span> over <span class="math inline">\(X\)</span> for fixed <span class="math inline">\(\hat D\)</span>. We will discuss the first ALS phase later in the paper.</p>
+<p>Start with the unit vectors <span class="math inline">\(e_i\)</span> of length <span class="math inline">\(n\)</span>. They have a non-zero element equal to one in position <span class="math inline">\(i\)</span>, all other elements are zero. Think of the <span class="math inline">\(e_i\)</span> as the columns of the identity matrix.</p>
+<p>Using the <span class="math inline">\(e_i\)</span> we define for all <span class="math inline">\(i\not= j\)</span> the matrices <span class="math display">\[\begin{equation}
+A_{ij}:=(e_i-e_j)(e_i-e_j)'.
+\end{equation}\]</span> The <span class="math inline">\(A_{ij}\)</span> are of order <span class="math inline">\(n\)</span>, symmetric, doubly-centered, and of rank one. They have four non-zero elements. Elements <span class="math inline">\((i,i)\)</span> and <span class="math inline">\((j,j)\)</span> are equal to <span class="math inline">\(+1\)</span>, elements <span class="math inline">\((i,j)\)</span> and <span class="math inline">\((j,i)\)</span> are <span class="math inline">\(-1\)</span>.</p>
+<p>The importance of <span class="math inline">\(A_{ij}\)</span> in MDS comes from the equation <span class="math display">\[\begin{equation}
+d_{ij}^2(X)=\text{tr}\ X'A_{ij}X.
+(\#eq:dfroma)
+\end{equation}\]</span> In addition we use the fact that the <span class="math inline">\(A_{ij}\)</span> form a basis for the <span class="math inline">\(binom{n}{2}\)</span>-dimensional linear space of all doubly-centered symmetric matrices.</p>
+<p>Expanding the square in the definition of stress gives <span class="math display">\[\begin{equation}
+\sigma(X)=\frac12\{\sum   w_k\delta_k^2-2\ \sum   w_k\delta_kd_k(X)+\sum   w_kd_k^2(X)\}.
+(\#eq:expand)
+\end{equation}\]</span> It is convenient to have notation for the three separate components of stress from equation @ref(eq:expand). Define <span class="math display">\[\begin{align}
+\eta_{\hat D}^2&amp;=\sum   w_{ij}\hat d_{ij}^2,(\#eq:condef)\\
+\rho(X)&amp;=\sum   w_{ij}\hat d_{ij}d_{ij}(X),(\#eq:rhodef)\\
+\eta^2(X)&amp;=\sum   w_{ij}d_{ij}(X)^2.(\#eq:etadef)
+\end{align}\]</span> which lead to <span class="math display">\[\begin{equation}
+\sigma(X)=\frac12\left\{\eta_{\hat D}^2-2\rho(X)+\eta^2(X)\right\}.
+(\#eq:stressshort)
+\end{equation}\]</span> We also need <span class="math display">\[\begin{equation}
+\lambda(X)=\frac{\rho(X)}{\eta(X)}.
+(\#eq:lambdadef)
+\end{equation}\]</span></p>
+<p>Using the <span class="math inline">\(A_{ij}\)</span> makes it possible to give matrix expressions for <span class="math inline">\(\rho\)</span> and <span class="math inline">\(\eta^2\)</span>. First <span class="math display">\[\begin{equation}
+\eta^2(X)=\text{tr}\ X'VX,
+(\#eq:etamat)
+\end{equation}\]</span> with <span class="math display">\[\begin{equation}
+V:=\sum   w_{ij}A_{ij}.
+(\#eq:vdef)
+\end{equation}\]</span> In the same way <span class="math display">\[\begin{equation}
+\rho(X)=\text{tr}\ X'B(X)X,
+(\#eq:rhomat)
+\end{equation}\]</span> with <span class="math display">\[\begin{equation}
+B(X):=\sum   w_{ij}r_{ij}(X)A_{ij},
+(\#eq:bdef)
+\end{equation}\]</span> with <span class="math display">\[\begin{equation}
+r_{ij}(X):=\begin{cases}\frac{\delta_{ij}}{d_{ij}(X)}&amp;\text{ if }d_{ij}(X)&gt;0,\\
+0&amp;\text{ if }d_{ij}(X)=0.
+\end{cases}
+\end{equation}\]</span> Note that <span class="math inline">\(B\)</span> is a function from the set of <span class="math inline">\(n\times p\)</span> configurations into the set of symmetric doubly-dentered matrices of order <span class="math inline">\(n\)</span>. All matrices of the form <span class="math inline">\(\sum x_{ij}A_{ij}\)</span>, where summation is over all pairs <span class="math inline">\((i,j)\)</span> with <span class="math inline">\(j&lt;i\)</span>, are symmetric and doubly-centered. They have <span class="math inline">\(-x_{ij}\)</span> as off-diagonal elements while the diagonal elements <span class="math inline">\((i,i)\)</span> are <span class="math inline">\(\sum_{j=1}^nx_{ij}\)</span>.</p>
+<p>Because <span class="math inline">\(B(X)\)</span> and <span class="math inline">\(V\)</span> are non-negative linear combinations of the <span class="math inline">\(A_{ij}\)</span> they are both positive semi-definite. Because <span class="math inline">\(W\)</span> is assumed to be irreducible the matrix <span class="math inline">\(V\)</span> has rank <span class="math inline">\(n-1\)</span>, with only vectors proportional to the vector <span class="math inline">\(e\)</span> with all elements equal to one in its null-space (<span class="citation" data-cites="deleeuw_C_77">De Leeuw (<a href="#ref-deleeuw_C_77" role="doc-biblioref">1977</a>)</span>).</p>
+<p>Summarizing the results so far we have <span class="math display">\[\begin{equation}
+\sigma(X)=\frac12\{\eta_{\hat D}^2-\text{tr}\ X'B(X)X+\text{tr}\ X'VX\}.
+(\#eq:sigmat)
+\end{equation}\]</span></p>
+<p>Next we define the <em>Guttman transform</em> of a configuration <span class="math inline">\(X\)</span>, for given <span class="math inline">\(W\)</span> and <span class="math inline">\(\Delta\)</span>, as <span class="math display">\[\begin{equation}
+G(X)=V^+B(X)X,
+(\#eq:gudef)
+\end{equation}\]</span> with <span class="math inline">\(V^+\)</span> the Moore-Penrose inverse of <span class="math inline">\(V\)</span>. In our computations we use <span class="math display">\[\begin{equation}
+V^+=(V+\frac{1}{n}ee')^{-1}-\frac{1}{n}ee'
+\end{equation}\]</span> Also note that in the unweighted case with complete data <span class="math inline">\(V=nJ\)</span>, where <span class="math inline">\(J\)</span> is the centering matrix <span class="math inline">\(I-\frac{1}{n}ee'\)</span>, and thus <span class="math inline">\(V^+=\frac{1}{n}J\)</span>. The Guttman transform is then simply <span class="math inline">\(G(X)=n^{-1}B(X)X\)</span>.</p>
+<p>We have defined stress as a function on <span class="math inline">\(\mathbb{R}^{n\times p}\)</span>, the space of <span class="math inline">\(n\times p\)</span> matrices. For some purposes it is convenient to use an alternative, but equivalent, definition of stress on <span class="math inline">\(\mathbb{R}^{np}\)</span>, the space of all vectors of length <span class="math inline">\(np\)</span>. Define <span class="math inline">\(\mathfrak{A}_{ij}\)</span> as the direct sum of <span class="math inline">\(p\)</span> copies of <span class="math inline">\(A_{ij}\)</span>. Thus <span class="math inline">\(\mathfrak{A}_{ij}\)</span> is block-diagonal of order <span class="math inline">\(np\)</span>. Now redefine stress as <span class="math display">\[
+\sigma(x):=\frac12\mathop{\sum\sum}_{1\leq i&lt;j\leq n}w_{ij}(\delta_{ij}-x'\mathfrak{A}_{ij}x)^2.
+\]</span> <span class="math display">\[
+\sigma(x)=1-x'\mathfrak{B}(x)x+\frac12 x'\mathfrak{V}x
+\]</span> where <span class="math inline">\(\mathfrak{B}(x)\)</span> and <span class="math inline">\(\mathfrak{V}\)</span> are direct sums of <span class="math inline">\(p\)</span> copies of our previous <span class="math inline">\(B(X)\)</span> and <span class="math inline">\(V\)</span>.</p>
+</section>
+<section id="intermezzo-explicit-normalization" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Intermezzo: Explicit Normalization</h1>
+<p><span class="math display">\[
+\sigma(X,\hat D)=\frac12\frac{\sum w_{ij}(\hat d_{ij}-d_{ij}(X))^2}{\sum w_{ij}d_{ij}^2(X)}
+\]</span> Majorize</p>
+<p><span class="math display">\[
+\sigma(X,\hat D)\leq\frac12\frac{\eta^2(\hat D)-2\text{tr}\ X'V\overline{Y}+\text{tr}\ X'VX}{\text{tr}\ X'VX}=\frac{\omega(X,Y)}{\eta^2(X)}
+\]</span> Stationary equations <span class="math display">\[
+\eta^2(X)(VX-VG(Y))-\omega(X,Y)VX=V\{(\eta^2(X)-\omega(X,Y))X-\eta^2(X)\overline Y\}
+\]</span> So at a minimum <span class="math inline">\(X\)</span> is proportional to <span class="math inline">\(\overline{Y}\)</span> or <span class="math inline">\(X=\alpha\overline{Y}\)</span> for some <span class="math inline">\(\alpha\)</span>. For … to be zero we must have <span class="math display">\[
+\alpha(\alpha^2\eta^2(\overline Y)-(\eta^2(\hat D)-2\alpha\eta^2(\overline Y)+\alpha^2\eta^2(\overline Y))=\alpha^2\eta^2(\overline Y)
+\]</span> which works out to be <span class="math display">\[
+\alpha=\frac{\eta^2(\hat D)}{\eta^2(\overline Y)}
+\]</span> <span class="math display">\[
+\hat X=\frac{\eta^2(\hat D)}{\eta^2(\overline Y)}\ \overline{Y}
+\]</span> The minimum is equal to</p>
+<p><span class="math display">\[
+\frac{-\frac{(\eta^2(\overline Y))^2}{\eta^2(\hat D)}+\eta^2(\overline Y)}{\eta^2(\overline Y)}=1-\frac{\eta^2(\overline Y)}{\eta^2(\hat D)}
+\]</span> Use homogeneity of the Guttman transform.</p>
+<p>More generally suppose we update with <span class="math display">\[
+X=\overline Y+\alpha(Y-\overline Y)
+\]</span> Write <span class="math display">\[
+\omega(X,Y)=\eta^2(\hat D)+\text{tr}\ (X-\overline Y)'V(X-\overline Y)-\eta^2(\overline Y)
+\]</span> Thus if <span class="math inline">\(X(\alpha)=\overline Y+\alpha(Y-\overline Y)\)</span> we have <span class="math display">\[
+\omega(\alpha)=\eta^2(\hat D)+\alpha^2\text{tr}\ (Y-\overline Y)'V(Y-\overline Y)-\eta^2(\overline Y)
+\]</span> and <span class="math display">\[
+\eta^2(\alpha)=\eta^2(\overline Y)+2\alpha\text{tr}\ (Y-\overline Y)'V\overline Y+\alpha^2\text{tr}\ (Y-\overline Y)'V(Y-\overline Y)
+\]</span> <span class="math display">\[
+\omega(Y,Y)=\eta^2(\hat D)+\text{tr}\ (Y-\overline Y)'V(Y-\overline Y)-\eta^2(\overline Y)
+\]</span> <span class="math display">\[
+\frac{\omega(\alpha)}{\eta^2(\alpha)}\leq\sigma(Y)
+\]</span></p>
+</section>
+<section id="smacof-algorithm" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Smacof Algorithm</h1>
+<section id="majorizing-stress" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="majorizing-stress"><span class="header-section-number">4.0.1</span> Majorizing Stress</h3>
+<p><span class="math display">\[
+\sigma(X)=\frac12\sum w_{ij}(\delta_{ij}-d_{ij}(X))^2=1-\rho(X)+\frac12\eta^2(X)
+\]</span></p>
+<div id="lem-cs" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lemma 4.1 (Cauchy-Schwartz)</strong></span> For all <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> <span class="math display">\[
+\rho(X)\geq\text{tr}\ X'B(Y)Y=\text{tr}\ X'V\overline{Y}
+\]</span> with equality if <span class="math inline">\(X=Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><span class="math display">\[
+d_{ij}(X)=\sqrt{\text{tr}\ X'A_{ij}X}
+\]</span> <span class="math display">\[
+d_{ij}(X)d_{ij}(Y)\geq\text{tr}\ X'A_{ij}Y
+\]</span> If <span class="math inline">\(d_{ij}(Y)&gt;0\)</span> this <span class="math display">\[
+d_{ij}(X)\geq\frac{1}{d_{ij}(Y)}\text{tr}\ X'A_{ij}Y
+\]</span> If <span class="math inline">\(d_{ij}(Y)=0\)</span> then <span class="math display">\[
+d_{ij}(X)\geq b_{ij}\ \text{tr}\ X'A_{ij}Y=0
+\]</span></p>
+</div>
+<p><span class="math display">\[
+\rho(X)=\text{tr}\ X'V\overline X\leq\eta(X)\eta(\overline X)
+\]</span> <span class="math display">\[\begin{align}
+\sigma(X)&amp;=1+\frac12\eta^2(X-\overline X)-\frac12\eta^2(\overline X),\\
+\sigma(X)&amp;\leq 1+\frac12\eta^2(X-\overline X)-\frac12\eta^2(\overline X).
+\end{align}\]</span></p>
+</section>
+<section id="accelerating" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="accelerating"><span class="header-section-number">4.0.2</span> Accelerating</h3>
+<p><span class="math display">\[
+X^+=\frac12(1+\beta)\overline{X}+\frac12(1-\beta)X
+\]</span> Regular smacof <span class="math inline">\(\beta = 1\)</span>. Accelerated <span class="math inline">\(\beta=3\)</span></p>
+</section>
+<section id="stress-formula-two" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="stress-formula-two"><span class="header-section-number">4.1</span> Stress formula two</h2>
+<p>Minorization result</p>
+</section>
+</section>
+<section id="smacof-datastructure" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> smacof Datastructure</h1>
+<p>with or without weights</p>
+<section id="metric" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="metric"><span class="header-section-number">5.0.1</span> Metric</h3>
+<p><span class="math inline">\((i, j, \text{dissimilarity}, \text{weight})\)</span></p>
+</section>
+<section id="interval" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="interval"><span class="header-section-number">5.1</span> Interval</h2>
+<p><span class="math inline">\((i, j, \text{lower bound}, \text{upper bound}, \text{weight})\)</span></p>
+</section>
+<section id="ordinal" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="ordinal"><span class="header-section-number">5.2</span> Ordinal</h2>
+<p><span class="math inline">\((i, j, \text{tied}, text{weight})\)</span></p>
+</section>
+<section id="paired-comparisons" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="paired-comparisons"><span class="header-section-number">5.3</span> Paired Comparisons</h2>
+<p><span class="math inline">\((i, j, k, l, \text{tied}, \text{weight})\)</span></p>
+</section>
+<section id="complete-triads" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="complete-triads"><span class="header-section-number">5.4</span> Complete triads</h2>
+<p><span class="math display">\[(i, j, k, \text{smallest}, \text{largest}, \text{weight})\]</span> ## Indicator</p>
+<p><span class="math display">\[(i, l, \text{weight})\]</span></p>
+</section>
+</section>
+<section id="code" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Code</h1>
+<p>The programs for the techniques discussed in this manual are (currently) written in R (<span class="citation" data-cites="r_core_team_24">R Core Team (<a href="#ref-r_core_team_24" role="doc-biblioref">2024</a>)</span>). There are plans to translate them, or at least their computational cores, to C, but I am not sure I’ll ever get to that.</p>
+<p>The functions in the R files that I wrote are all called smacofFoo, using Camel Case, where Foo is something more or less descriptive of what the function is doing. Of course functions that come with R, or with packages written by others, keep their original names. Plots are made in ggplot2 (<span class="citation" data-cites="wickham_16">Wickham (<a href="#ref-wickham_16" role="doc-biblioref">2016</a>)</span>), the manual is written in quarto ().</p>
+<p>Each chapter of the manual has one main function implementing the technique discussed in the chapter. Since the programs share a lot of code there are many subroutines or modules implementing common operations. For my private use the code for each chapter is compiled into a barebones R package.</p>
+<p>Almost all programs contain what I call a “partial iterator”. It is a piece of code that performs iterations and that looks like</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>smacofFoo <span class="ot">&lt;-</span> <span class="cf">function</span>(xold, itmax, eps, verbose, ...) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  itel <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  fold <span class="ot">&lt;-</span> evaluation xold</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">repeat</span> {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    xnew <span class="ot">&lt;-</span> update xold</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    fnew <span class="ot">&lt;-</span> evaluation xnew</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (verbose) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"itel "</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">formatC</span>(itel, <span class="at">format =</span> <span class="st">"d"</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"fold "</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">formatC</span>(fold, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> some number),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"fnew "</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">formatC</span>(fnew, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> some number),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"</span><span class="sc">\n</span><span class="st">"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ((<span class="fu">test</span>(fold, fnew) <span class="sc">||</span> (itel <span class="sc">==</span> itmax))) {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    itel <span class="ot">&lt;-</span> itel <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    xold <span class="ot">&lt;-</span> xnew</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    fold <span class="ot">&lt;-</span> fnew</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">x =</span> xnew, <span class="at">f =</span> fnew, other results))</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Partial iterators can, and often are, nested, so there are outer, inner, innermost and so on iterations. Iterators test for convergence, but in inner iterations they are often called with a small value of itmax, so they only perform a small number of iterations. They merely improve their objective, they do not go all the way to the optimum or fixed point. Many of the iterators depend on alternating least squares (<span class="citation" data-cites="deleeuw_C_94c">De Leeuw (<a href="#ref-deleeuw_C_94c" role="doc-biblioref">1994</a>)</span>). majorization (<span class="citation" data-cites="deleeuw_C_94c">De Leeuw (<a href="#ref-deleeuw_C_94c" role="doc-biblioref">1994</a>)</span>), or MM (<span class="citation" data-cites="lange_16">Lange (<a href="#ref-lange_16" role="doc-biblioref">2016</a>)</span>) to compute these improvements</p>
+</section>
+<section id="references" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bauschke_bui_wang_18" class="csl-entry" role="listitem">
+Bauschke, H. H., M. N. Bui, and X. Wang. 2018. <span>“<span class="nocase">Projecting onto the Intersection of a Cone and a Sphere</span>.”</span> <em>SIAM Journal on Optimization</em> 28: 2158–88.
+</div>
+<div id="ref-borg_groenen_05" class="csl-entry" role="listitem">
+Borg, I., and P. J. F. Groenen. 2005. <em>Modern Multidimensional Scaling</em>. Second Edition. Springer.
+</div>
+<div id="ref-deleeuw_R_68d" class="csl-entry" role="listitem">
+De Leeuw, J. 1968. <span>“Nonmetric Discriminant Analysis.”</span> Research Note 06-68. Department of Data Theory, University of Leiden.
+</div>
+<div id="ref-deleeuw_U_75a" class="csl-entry" role="listitem">
+———. 1975. <span>“<span class="nocase">A Normalized Cone Regression Approach to Alternating Least Squares Algorithms</span>.”</span> Department of Data Theory FSW/RUL.
+</div>
+<div id="ref-deleeuw_C_77" class="csl-entry" role="listitem">
+———. 1977. <span>“Applications of Convex Analysis to Multidimensional Scaling.”</span> In <em>Recent Developments in Statistics</em>, edited by J. R. Barra, F. Brodeau, G. Romier, and B. Van Cutsem, 133–45. Amsterdam, The Netherlands: North Holland Publishing Company.
+</div>
+<div id="ref-deleeuw_A_88b" class="csl-entry" role="listitem">
+———. 1988. <span>“Convergence of the Majorization Method for Multidimensional Scaling.”</span> <em>Journal of Classification</em> 5: 163–80.
+</div>
+<div id="ref-deleeuw_C_94c" class="csl-entry" role="listitem">
+———. 1994. <span>“<span class="nocase">Block Relaxation Algorithms in Statistics</span>.”</span> In <em>Information Systems and Data Analysis</em>, edited by H. H. Bock, W. Lenski, and M. M. Richter, 308–24. Berlin: Springer Verlag. <a href="https://jansweb.netlify.app/publication/deleeuw-c-94-c/deleeuw-c-94-c.pdf">https://jansweb.netlify.app/publication/deleeuw-c-94-c/deleeuw-c-94-c.pdf</a>.
+</div>
+<div id="ref-deleeuw_E_17e" class="csl-entry" role="listitem">
+———. 2017. <span>“<span class="nocase">Shepard Non-metric Multidimensional Scaling</span>.”</span> 2017. <a href="https://jansweb.netlify.app/publication/deleeuw-e-17-e/deleeuw-e-17-e.pdf">https://jansweb.netlify.app/publication/deleeuw-e-17-e/deleeuw-e-17-e.pdf</a>.
+</div>
+<div id="ref-deleeuw_E_19d" class="csl-entry" role="listitem">
+———. 2019. <span>“Normalized Cone Regression.”</span> 2019. <a href="https://jansweb.netlify.app/publication/deleeuw-e-19-d/deleeuw-e-19-d.pdf">https://jansweb.netlify.app/publication/deleeuw-e-19-d/deleeuw-e-19-d.pdf</a>.
+</div>
+<div id="ref-deleeuw_heiser_C_77" class="csl-entry" role="listitem">
+De Leeuw, J., and W. J. Heiser. 1977. <span>“Convergence of Correction Matrix Algorithms for Multidimensional Scaling.”</span> In <em>Geometric Representations of Relational Data</em>, edited by J. C. Lingoes, 735–53. Ann Arbor, Michigan: Mathesis Press.
+</div>
+<div id="ref-deleeuw_heiser_C_80" class="csl-entry" role="listitem">
+———. 1980. <span>“Multidimensional Scaling with Restrictions on the Configuration.”</span> In <em>Multivariate Analysis, Volume <span>V</span></em>, edited by P. R. Krishnaiah, 501–22. Amsterdam, The Netherlands: North Holland Publishing Company.
+</div>
+<div id="ref-deleeuw_heiser_C_82" class="csl-entry" role="listitem">
+———. 1982. <span>“Theory of Multidimensional Scaling.”</span> In <em>Handbook of Statistics, Volume <span>II</span></em>, edited by P. R. Krishnaiah and L. Kanal. Amsterdam, The Netherlands: North Holland Publishing Company.
+</div>
+<div id="ref-deleeuw_mair_A_09c" class="csl-entry" role="listitem">
+De Leeuw, J., and P. Mair. 2009. <span>“<span class="nocase">Multidimensional Scaling Using Majorization: SMACOF in R</span>.”</span> <em>Journal of Statistical Software</em> 31 (3): 1–30. <a href="https://www.jstatsoft.org/article/view/v031i03">https://www.jstatsoft.org/article/view/v031i03</a>.
+</div>
+<div id="ref-groenen_vandevelden_16" class="csl-entry" role="listitem">
+Groenen, P. J. F., and M. Van de Velden. 2016. <span>“<span class="nocase">Multidimensional Scaling by Majorization: A Review</span>.”</span> <em>Journal of Statistical Software</em> 73 (8): 1–26. <a href="https://www.jstatsoft.org/index.php/jss/article/view/v073i08">https://www.jstatsoft.org/index.php/jss/article/view/v073i08</a>.
+</div>
+<div id="ref-guttman_68" class="csl-entry" role="listitem">
+Guttman, L. 1968. <span>“<span class="nocase">A General Nonmetric Technique for Fitting the Smallest Coordinate Space for a Configuration of Points</span>.”</span> <em>Psychometrika</em> 33: 469–506.
+</div>
+<div id="ref-kruskal_64a" class="csl-entry" role="listitem">
+Kruskal, J. B. 1964a. <span>“<span class="nocase">Multidimensional Scaling by Optimizing Goodness of Fit to a Nonmetric Hypothesis</span>.”</span> <em>Psychometrika</em> 29: 1–27.
+</div>
+<div id="ref-kruskal_64b" class="csl-entry" role="listitem">
+———. 1964b. <span>“<span class="nocase">Nonmetric Multidimensional Scaling: a Numerical Method</span>.”</span> <em>Psychometrika</em> 29: 115–29.
+</div>
+<div id="ref-kruskal_carroll_69" class="csl-entry" role="listitem">
+Kruskal, J. B., and J. D. Carroll. 1969. <span>“<span class="nocase">Geometrical Models and Badness of Fit Functions</span>.”</span> In <em>Multivariate Analysis, Volume II</em>, edited by P. R. Krishnaiah, 639–71. North Holland Publishing Company.
+</div>
+<div id="ref-lange_16" class="csl-entry" role="listitem">
+Lange, K. 2016. <em>MM Optimization Algorithms</em>. SIAM.
+</div>
+<div id="ref-mair_groenen_deleeuw_A_22" class="csl-entry" role="listitem">
+Mair, P., P. J. F. Groenen, and J. De Leeuw. 2022. <span>“<span class="nocase">More on Multidimensional Scaling in R: smacof Version 2</span>.”</span> <em>Journal of Statistical Software</em> 102 (10): 1–47. <a href="https://www.jstatsoft.org/article/view/v102i10">https://www.jstatsoft.org/article/view/v102i10</a>.
+</div>
+<div id="ref-r_core_team_24" class="csl-entry" role="listitem">
+R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. <span>Vienna, Austria</span>: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-shepard_62a" class="csl-entry" role="listitem">
+Shepard, R. N. 1962a. <span>“<span class="nocase">The Analysis of Proximities: Multidimensional Scaling with an Unknown Distance Function. I</span>.”</span> <em>Psychometrika</em> 27: 125–40.
+</div>
+<div id="ref-shepard_62b" class="csl-entry" role="listitem">
+———. 1962b. <span>“<span class="nocase">The Analysis of Proximities: Multidimensional Scaling with an Unknown Distance Function. II</span>.”</span> <em>Psychometrika</em> 27: 219–46.
+</div>
+<div id="ref-torgerson_52" class="csl-entry" role="listitem">
+Torgerson, W. S. 1952. <span>“<span class="nocase">Multidimensional Scaling: I. Theory and Method</span>.”</span> <em>Psychometrika</em> 17 (4): 401–19.
+</div>
+<div id="ref-wickham_16" class="csl-entry" role="listitem">
+Wickham, H. 2016. <em><span class="nocase">ggplot2. Elegant Graphics fopr Data Analysis</span></em>. Use r! Springer.
+</div>
+<div id="ref-young_81" class="csl-entry" role="listitem">
+Young, F. W. 1981. <span>“<span class="nocase">Quantitative Analysis of Qualitative Data</span>.”</span> <em>Psychometrika</em> 46: 357–88.
+</div>
+<div id="ref-young_deleeuw_takane_C_80" class="csl-entry" role="listitem">
+Young, F. W., J. De Leeuw, and Y. Takane. 1980. <span>“Quantifying Qualitative Data.”</span> In <em>Similarity and Choice. Papers in Honor of Clyde Coombs</em>, edited by E. D. Lantermann and H. Feger. Bern: Hans Huber.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./metric.html" class="pagination-link" aria-label="Metric smacof">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Metric smacof</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,64 @@
+# Metric smacof
+
+In this part of the manual we discuss metric MDS, and the program
+smacofME. Metric MDS is the core of all smacof programs, because they
+all have the majorization algorithm based on the Guttman transform 
+in common.
+
+## Program
+
+### Parameters
+
+```{r parameters, eval = FALSE}
+smacofME <- function(thedata,
+                     ndim = 2,
+                     xold = NULL,
+                     labels = NULL,
+                     width = 15,
+                     precision = 10,
+                     itmax = 1000,
+                     eps = 1e-10,
+                     verbose = TRUE,
+                     jitmax = 20,
+                     jeps = 1e-10,
+                     jverbose = FALSE,
+                     kitmax = 20,
+                     keps = 1e-10,
+                     kverbose = FALSE,
+                     init = 1)
+```
+
+Parameter *ndim* is the number of dimensions, and *init* tells if an initial configuration
+is read from a file (init = 1), is computed using classical scaling (init = 2), or is
+a random configuration (init = 3). Parameters
+*itmax*, *epsi*, and *verbose* control the iterations. The maximum number of iterations
+is *itmax*, the iterations stop if the decrease of stress in an iteration is less than
+1E-*epsi*, and if *verbose* is one intermediate iteration results are written to stdout.
+These intermediate iteration results are formatted with the R function formatC(), using
+*width* for the width argument and *precision* for the digits argument. 
+
+## Algorithm
+
+
+
+
+## Output
+
+```{r output, eval = FALSE}
+  h <- list(
+    delta = delta,
+    nobj = nobj,
+    ndim = ndim,
+    snew = snew,
+    itel = itel,
+    xnew = xnew,
+    dmat = dmat,
+    labels = labels
+  )
+```
+
+## Plots
+
+# Examples
+
+## @degruijter_67

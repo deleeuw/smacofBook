@@ -1,3 +1,7 @@
+**Note:** This manual is a working manuscript which will be expanded/updated frequently. All suggestions for improvement are welcome. All Rmd, tex, html, pdf, R, and C files are in the public domain and can be copied, modified, and used by anybody in any way they see fit. Attribution will be appreciated, but is not required. The files can be found at <https://github.com/deleeuw> in the repositories smacofCode, smacofManual, and smacofExamples.
+
+\sectionbreak
+
 # Preface {.unnumbered}
 
 This manual is definitely *not* an impartial and balanced review of all of
@@ -25,7 +29,7 @@ visit to Clyde Coombs in Michigan and started the Department of Data
 Theory in the Division of Social Sciences at Leiden University. I was
 John's first hire, although I was still a graduate student at the time.
 
-Remember that Clyde Coombs was running the Michigan Mathematical
+Remember that Clyde Coombs was chairing the Michigan Mathematical
 Psychology Program, and he had just published his remarkable book "A
 Theory of Data" (@coombs_64). The name of the new department in Leiden
 was taken from the title of that book, and Coombs was one of the first

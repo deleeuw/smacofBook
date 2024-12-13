@@ -20,7 +20,7 @@ If it's an individual decision, or something personal, then I use "I".
 The default is "we", as it always should be in scientific writing.
 
 Most of the individual chapters also have some of the necessary mathematical background material, both notation and results, sometimes with specific elaborations that seem useful for the book. Sometimes this background material is quite extensive. Examples are splines, majorization, unweighting, monotone
-regression, and the basic Zangwill and Ostrowski fixed point theorems we need for convergence analysis of our algorithms.
+regression, and the basic fixed point theorems we need for convergence analysis of our algorithms.
 
 ## Notations and Reserved Symbols {.unnumbered}
 

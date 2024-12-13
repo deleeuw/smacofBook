@@ -1,0 +1,67 @@
+\contentsline {chapter}{Preface}{1}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Brief History}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Prehistory}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Torgerson}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Bell Laboratories}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Guttman-Lingoes}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Alternating Least Squares}{13}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Majorization}{13}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Basic MDS}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Kruskal's stress}{18}{section.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.0.1}Square root}{18}{subsubsection.3.1.0.1}%
+\contentsline {subsubsection}{\numberline {3.1.0.2}Weights}{18}{subsubsection.3.1.0.2}%
+\contentsline {subsubsection}{\numberline {3.1.0.3}Normalization}{19}{subsubsection.3.1.0.3}%
+\contentsline {section}{\numberline {3.2}Local and Global Minima}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Partitioning Loss}{21}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Generalizations}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Non-linear MDS}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Non-metric MDS}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Fstress and Friends}{25}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Constraints}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Individual Differences}{26}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Asymmetry}{27}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Non-Euclidean Distances}{27}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Principles of Algorithm Constuction}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Alternating Least Squares}{29}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Majorization}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Introduction to Majorization}{29}{section.5.3}%
+\contentsline {chapter}{\numberline {6}smacof Basics}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Loss Function}{35}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Metric MDS}{35}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Non-linear MDS}{37}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Non-metric MDS}{38}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Normalization}{38}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Some thoughts on ALS}{40}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}The Single-Phase approach}{41}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}The Two-Phase Approach}{42}{subsection.6.6.2}%
+\contentsline {section}{\numberline {6.7}Smacof Notation and Terminology}{44}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Intermezzo: Explicit Normalization}{47}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Smacof Algorithm}{49}{chapter.8}%
+\contentsline {subsection}{\numberline {8.0.1}Majorizing Stress}{49}{subsection.8.0.1}%
+\contentsline {subsection}{\numberline {8.0.2}Accelerating}{50}{subsection.8.0.2}%
+\contentsline {section}{\numberline {8.1}Stress formula two}{50}{section.8.1}%
+\contentsline {chapter}{\numberline {9}smacof Datastructure}{51}{chapter.9}%
+\contentsline {subsection}{\numberline {9.0.1}Metric}{51}{subsection.9.0.1}%
+\contentsline {section}{\numberline {9.1}Interval}{51}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Ordinal}{51}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Paired Comparisons}{51}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Complete triads}{52}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Code}{53}{chapter.10}%
+\contentsline {chapter}{\numberline {11}References}{55}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Metric smacof}{57}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Program}{57}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Parameters}{57}{subsection.12.1.1}%
+\contentsline {section}{\numberline {12.2}Algorithm}{58}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Output}{58}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Plots}{58}{section.12.4}%
+\contentsline {chapter}{\numberline {13}Examples}{59}{chapter.13}%
+\contentsline {section}{\numberline {13.1}De Gruijter (\citeproc {ref-degruijter_67}{1967})}{59}{section.13.1}%
+\contentsline {chapter}{Notations}{61}{chapter*.5}%
+\contentsline {section}{Conventions}{61}{section*.6}%
+\contentsline {section}{Notations and Reserved Symbols}{62}{section*.7}%
+\contentsline {subsection}{Spaces}{62}{section*.8}%
+\contentsline {subsection}{Matrices}{62}{section*.9}%
+\contentsline {subsection}{Functions}{63}{section*.10}%
+\contentsline {subsection}{MDS}{63}{section*.11}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

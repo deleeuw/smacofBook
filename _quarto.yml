@@ -4,25 +4,49 @@ project:
 book:
   title: "smacof at 50"
   subtitle: "A Manual"  
-  author: "Jan de Leeuw"
-  date: "12/13/2024"
+  author: 
+    - name: Jan de Leeuw
+      orcid: 0000-0003-1420-1797
+      email: jan@deleeuwpdx.net
+      affiliation: 
+        - name: University of California Los Angeles
+          city: Los Angeles
+          state: CA
+          url: www.ucla.edu
+      license: "CC0"  
+  date: last-modified
   chapters:
     - index.qmd     
     - intro.qmd
+    - basics.qmd
+    - metric.qmd
     - notation.qmd
-    - references.qmd
 
 bibliography: 
   - total.bib
   - mypubs.bib
+
 
 format:
   html:
     theme:
       - cosmo
       - brand
+    keep-md: true
   pdf:
-    documentclass: scrreprt
-
-
+    pdf-engine: lualatex
+    keep-tex: true
+    include-in-header: 
+      - preamble.tex
+    documentclass: scrbook
+    
+colorlinks: true
+fontsize: 12pt
+toc: true
+toc-depth: 3
+editor: source
+papersize: letter
+graphics: true
+link-citations: true
+mainfont: Times New Roman
 
