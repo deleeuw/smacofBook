@@ -1,4 +1,4 @@
-# smacof Basics
+# Basics
 
 ## Loss Function
 

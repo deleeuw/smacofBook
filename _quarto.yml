@@ -19,7 +19,10 @@ book:
     - index.qmd     
     - intro.qmd
     - basics.qmd
+    - convergence.qmd
+    - acceleration.qmd
     - metric.qmd
+    - interval.qmd
     - notation.qmd
 
 bibliography: 
